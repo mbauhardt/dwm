@@ -66,6 +66,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *upvol[]   = { "amixer", "set", "Master", "5%+",     NULL };
 static const char *downvol[] = { "amixer", "set", "Master", "5%-",     NULL };
 static const char *mutevol[] = { "amixer", "set", "Master", "toggle",  NULL };
+static const char *clipmenu[] = { "clipmenu", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -100,6 +101,7 @@ static Key keys[] = {
 	{ MODKEY,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
 	{ MODKEY,                       XF86XK_AudioMute,  spawn, {.v = mutevol } },
 	{ MODKEY,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+	{ MODKEY,                       XK_v,      spawn,          {.v = clipmenu } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
