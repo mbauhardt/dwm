@@ -64,9 +64,9 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *upvol[]   = { "amixer", "set", "Master", "5%+",     NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "5%-",     NULL };
-static const char *mutevol[] = { "amixer", "set", "Master", "toggle",  NULL };
+static const char *upvol[]   = { "sndioctl", "output.level=+0.05", NULL };
+static const char *downvol[] = { "sndioctl", "output.level=-0.05", NULL };
+static const char *mutevol[] = { "sndioctl", "output.mute=!", NULL };
 static const char *clipmenu[] = { "clipmenu", NULL };
 // buku -p -f 5 | sed 's/\t/ /g' | dmenu -i -fn "Monospace:24" -l 10 | cut -d ' ' -f 1 | xargs --no-run-if-empty buku -o
 static const char *bukucmd[] = { "dmenubuku", NULL };
