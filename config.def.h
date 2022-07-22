@@ -70,10 +70,12 @@ static const char *mutevol[] = { "sndioctl", "output.mute=!", NULL };
 static const char *clipmenu[] = { "clipmenu", NULL };
 // buku -p -f 5 | sed 's/\t/ /g' | dmenu -i -fn "Monospace:24" -l 10 | cut -d ' ' -f 1 | xargs --no-run-if-empty buku -o
 static const char *bukucmd[] = { "dmenubuku", NULL };
+static const char *passcmd[] = { "passmenu", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = passcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_b,      spawn    ,      {.v = bukucmd } },
