@@ -8,16 +8,10 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:pixelsize=14:style=light" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:pixelsize=14:style=light";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#e0e0e0";
-static const char col_orange_dark[] = "#af3a03";
-static const char col_cyan[]        = "#005577";
-static const char col_orange[]      = "#d65d0e";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { "#ebdbb2", "#282828", "#282828" },
-	[SchemeSel]  = { "#ebdbb2", "#98971a", "#98971a" },
+	[SchemeNorm] = { "#D8DEE9", "#2E3440", "#2E3440" },
+	[SchemeSel]  = { "#D8DEE9", "#2E3440", "#d8dee9" },
 };
 
 /* tagging */
